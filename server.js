@@ -28,7 +28,7 @@ const upload = multer({ storage });
 
 // File upload route
 app.post('/upload', upload.single('file'), (req, res) => {
-  console.log('✅ File uploaded:', req.file.path);
+  console.log('File uploaded:', req.file.path);
 
   // Macro triggering will be added in Step 4
   res.status(200).json({ message: 'File uploaded successfully!' });
